@@ -1,3 +1,14 @@
+import fitz  # PyMuPDF
+from PyPDF2 import PdfReader
+import numpy as np
+import easyocr
+import torch
+import re
+
+from typing import List, Dict
+
+from src.schemas import PageInfo, LogicalDocument
+
 def extract_and_analyze_pdf(pdf_file) -> Tuple[List[PageInfo], List[LogicalDocument]]:
     """
     Extract text from PDF and perform intelligent document analysis.
