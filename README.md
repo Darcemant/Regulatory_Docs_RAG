@@ -1,1 +1,1 @@
-# Regulatory_Docs_RAG
+# Pharmaceutical_Documents_RAG
