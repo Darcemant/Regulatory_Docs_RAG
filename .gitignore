@@ -9,3 +9,6 @@ data/
 *.index
 chroma_db/
 faiss_index/
+
+models/
+*.gguf
