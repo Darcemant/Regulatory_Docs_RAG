@@ -1,3 +1,8 @@
+import hashlib
+import time
+
+from typing import Dict
+
 def score_label(score: float) -> str:
     """Convert a 0-1 score into a simple confidence label."""
     if score >= 0.85:
