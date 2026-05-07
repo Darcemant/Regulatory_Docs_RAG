@@ -7,8 +7,8 @@ from llama_index.core.node_parser import SentenceSplitter
 from src.config import CHUNK_SIZE, CHUNK_OVERLAP
 
 def chunk_document_with_metadata(logical_doc: LogicalDocument,
-                                chunk_size: int = 500,
-                                overlap: int = 100) -> List[ChunkMetadata]:
+                                chunk_size: int = CHUNK_SIZE,
+                                overlap: int = CHUNK_OVERLAP) -> List[ChunkMetadata]:
     """
     Chunk a logical document while preserving rich metadata.
     Uses sliding window with overlap for better context.
