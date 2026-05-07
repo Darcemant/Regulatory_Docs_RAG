@@ -10,6 +10,10 @@ The system processes PDF documents using OCR, metadata classification, text chun
 
 Pharmaceutical documentation is often long, technical, and difficult to search manually. This project explores how RAG can improve document search, source-backed question answering, and review efficiency.
 
+## Video Demo
+
+---
+
 ## Key Features
 
 - PDF ingestion
@@ -65,11 +69,11 @@ Pharmaceutical documentation is often long, technical, and difficult to search m
 
 ```text
 src/
-notebooks/
-docs/
+notebook/
 reports/
-assets/
 ```
 
-Download the Phi-3 GGUF model separately and place it at:
+- Download the Phi-3 GGUF model separately and place it at:
+```text
 models/phi3.gguf
+```
