@@ -1,3 +1,6 @@
+import gradio as gr
+from gradio_pdf import PDF
+
 from src.document_store import EnhancedDocumentStore
 
 # Global store instance
