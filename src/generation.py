@@ -1,10 +1,21 @@
+from typing import List, Dict
+
+import torch
+
+from transformers import pipeline
+
+from src.schemas import ChunkMetadata
+from src.config import (
+    MAX_CHUNKS,
+    MAX_CHARS_PER_CHUNK
+)
 from src.prompts import QA_PROMPT
 
 def generate_answer_with_sources(
     query: str,
     retrieved_chunks: List[Tuple[ChunkMetadata, float]],
-    max_chunks: int = 3,
-    max_chars_per_chunk: int = 600
+    max_chunks: int = MAX_CHUNKS,
+    max_chars_per_chunk: int = MAX_CHARS_PER_CHUNK
 ) -> Dict:
     """
     Generate an answer with source attribution while keeping context small.
