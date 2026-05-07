@@ -1,9 +1,9 @@
 from typing import List
-from src.schemas import LogicalDocument, ChunkMetadata
-import re
-from llama_index.core.node_parser import SentenceSplitter
+
 from llama_index.core import Document
 from llama_index.core.node_parser import SentenceSplitter
+
+from src.schemas import LogicalDocument, ChunkMetadata
 from src.config import CHUNK_SIZE, CHUNK_OVERLAP
 
 def chunk_document_with_metadata(logical_doc: LogicalDocument,
