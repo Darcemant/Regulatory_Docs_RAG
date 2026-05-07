@@ -1,3 +1,5 @@
+from src.prompts import QA_PROMPT
+
 def generate_answer_with_sources(
     query: str,
     retrieved_chunks: List[Tuple[ChunkMetadata, float]],
