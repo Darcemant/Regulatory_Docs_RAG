@@ -1,3 +1,6 @@
+from src.utils import score_label
+from src.schemas import ChunkMetadata
+
 def predict_query_document_type(query: str) -> Tuple[str, float]:
     """
     Fast keyword-based query router.
