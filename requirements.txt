@@ -1,0 +1,12 @@
+gradio
+gradio-pdf
+pandas
+numpy
+pymupdf
+PyPDF2
+easyocr
+torch
+sentence-transformers
+faiss-cpu
+llama-index
+llama-index-embeddings-huggingface
