@@ -1,5 +1,6 @@
 import gradio as gr
 from gradio_pdf import PDF
+import time
 
 from src.document_store import EnhancedDocumentStore
 
