@@ -8,6 +8,7 @@ import re
 from typing import List, Dict
 
 from src.schemas import PageInfo, LogicalDocument
+from src.config import OCR_TRIGGER_MAX_CHARS
 
 def extract_and_analyze_pdf(pdf_file) -> Tuple[List[PageInfo], List[LogicalDocument]]:
     """
