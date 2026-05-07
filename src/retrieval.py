@@ -1,5 +1,12 @@
-from src.utils import score_label
+import faiss
+import numpy as np
+
+from typing import List, Tuple, Optional
+
+from sentence_transformers import SentenceTransformer
+
 from src.schemas import ChunkMetadata
+from src.utils import score_label
 
 def predict_query_document_type(query: str) -> Tuple[str, float]:
     """
