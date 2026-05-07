@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+from typing import List, Dict, Optional
+
 @dataclass
 class PageInfo:
     """Stores information about a single page"""
