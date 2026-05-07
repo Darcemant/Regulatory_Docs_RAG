@@ -1,11 +1,16 @@
-from typing import List, Tuple, Optional
+from typing import List, Dict, Optional
+from datetime import datetime
 
-from src.schemas import ChunkMetadata, LogicalDocument
+from src.pdf_processing import extract_and_analyze_pdf
 from src.chunking import process_all_documents
 from src.retrieval import IntelligentRetriever
 from src.generation import generate_answer_with_sources
-from src.metadata import batch_classify_pages
-from src.config import TOP_K
+
+from src.config import (
+    TOP_K,
+    MAX_CHUNKS,
+    MAX_CHARS_PER_CHUNK
+)
 
 class EnhancedDocumentStore:
     """
@@ -82,8 +87,8 @@ class EnhancedDocumentStore:
         result = generate_answer_with_sources(
             question,
             retrieved,
-            max_chunks=3,
-            max_chars_per_chunk=600
+            max_chunks=MAX_CHUNKS,
+            max_chars_per_chunk=MAX_CHARS_PER_CHUNK
         )
 
         return result
