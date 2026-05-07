@@ -1,6 +1,11 @@
+from typing import List, Tuple, Optional
+
+from src.schemas import ChunkMetadata, LogicalDocument
 from src.chunking import process_all_documents
 from src.retrieval import IntelligentRetriever
 from src.generation import generate_answer_with_sources
+from src.metadata import batch_classify_pages
+from src.config import TOP_K
 
 class EnhancedDocumentStore:
     """
@@ -55,7 +60,7 @@ class EnhancedDocumentStore:
             return False, {'error': str(e)}
 
     def query(self, question: str, filter_type: Optional[str] = None,
-             auto_route: bool = True, k: int = 2) -> Dict:
+             auto_route: bool = True, k: int = TOP_K) -> Dict:
         """
         Query the document store.
         """
