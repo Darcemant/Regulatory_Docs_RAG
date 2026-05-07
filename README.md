@@ -69,6 +69,7 @@ notebooks/
 docs/
 reports/
 assets/
+```
 
 Download the Phi-3 GGUF model separately and place it at:
 models/phi3.gguf
