@@ -10,6 +10,9 @@ from src.config import (
     MAX_CHARS_PER_CHUNK
 )
 from src.prompts import QA_PROMPT
+from src.llm import load_phi3_llm
+
+llm = load_phi3_llm()
 
 def generate_answer_with_sources(
     query: str,
